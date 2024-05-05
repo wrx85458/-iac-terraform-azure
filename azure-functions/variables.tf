@@ -1,35 +1,35 @@
 variable "resource_group_name" {
-  description = "test"
+  default = "test"
 }
 
 variable "location" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_account_name" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_account_tier" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_account_replication_type" {
-  description = "test"
+  default = "test"
 }
 
 variable "app_service_plan_name" {
-  description = "test"
+  default = "test"
 }
 
 variable "app_service_plan_tier" {
-  description = "test"
+  default = "test"
 }
 
 variable "app_service_plan_size" {
-  description = "test"
+  default = "test"
 }
 
 variable "function_app_name" {
-  description = "test"
+  default = "test"
 }

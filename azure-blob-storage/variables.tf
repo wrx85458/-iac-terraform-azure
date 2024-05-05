@@ -1,27 +1,27 @@
 variable "resource_group_name" {
-  description = "test"
+  default = "test"
 }
 
 variable "location" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_account_name" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_account_tier" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_account_replication_type" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_container_name" {
-  description = "test"
+  default = "test"
 }
 
 variable "storage_blob_name" {
-  description = "test"
+  default = "test"
 }
