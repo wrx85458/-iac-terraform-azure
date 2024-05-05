@@ -34,11 +34,24 @@ resource "azurerm_function_app" "test" {
 }
 
 resource "azurerm_function_app_function" "test" {
-  function_app_id  = azurerm_function_app.test.id
-  name             = "MyFunction"
-  storage_account_name = azurerm_storage_account.test.name
-  storage_account_access_key = azurerm_storage_account.test.primary_access_key
-  app_settings = {
-    "AzureWebJobsStorage" = azurerm_storage_account.test.primary_connection_string
-  }
+  function_app_id = azurerm_function_app.test.id
+  name            = "MyFunction"
+  config_json     = <<CONFIG
+    {
+      "bindings": [
+        {
+          "name": "req",
+          "type": "httpTrigger",
+          "direction": "in",
+          "authLevel": "anonymous"
+        },
+        {
+          "name": "$return",
+          "type": "http",
+          "direction": "out"
+        }
+      ]
+    }
+  CONFIG
 }
+
